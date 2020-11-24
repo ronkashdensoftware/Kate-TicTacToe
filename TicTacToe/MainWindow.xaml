@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition/>
+    <ColumnDefinition/>
+    <ColumnDefinition/>
+  </Grid.ColumnDefinitions>
+  <Grid.RowDefinitions>
+    <RowDefinition/>
+    <RowDefinition/>
+    <RowDefinition/>
+  </Grid.RowDefinitions>
 
-    </Grid>
+  <Button x:Name="TopL" Content="Click to cycle through" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CEEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="TopC" Content="Click to cycle through" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CCEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="TopR" Content="Click to cycle through" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CCEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="MidL" Content="Click to cycle through" Grid.Row="1"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CCEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="MidC" Content="Click to cycle through" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CCEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="MidR" Content="Click to cycle through" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CCEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="BotL" Content="Click to cycle through" Grid.Row="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CEEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="BotC" Content="Click to cycle through" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CEEA" FontSize="24" Click="Cycle"/>
+  <Button x:Name="BotR" Content="Click to cycle through" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="#FFB1CEEA" FontSize="24" Click="Cycle"/>
+  </Grid>
 </Window>

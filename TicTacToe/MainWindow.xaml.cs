@@ -24,5 +24,22 @@ namespace TicTacToe
     {
       InitializeComponent();
     }
+
+    private void Cycle(object sender, RoutedEventArgs e)
+    {
+      Button clicked = (Button)sender;
+      if ((String)clicked.Content == "X")
+      {
+        clicked.Content = "O";
+      }
+      else if ((String)clicked.Content == "O")
+      {
+        clicked.Content = " ";
+      }
+      else
+      {
+        clicked.Content = "X";
+      }
+    }
   }
 }
