@@ -149,6 +149,161 @@ namespace TicTacToe
 
     }
 
-    //-----------------------------
-  }
+        //-----------------------------
+        int[] row1 = new int[] { 0, 0 };
+        int[] row2 = new int[] { 0, 0 };
+        int[] row3 = new int[] { 0, 0 };
+        int[] col1 = new int[] { 0, 0 };
+        int[] col2 = new int[] { 0, 0 };
+        int[] col3 = new int[] { 0, 0 };
+        int[] diagLR = new int[] { 0, 0 };
+        int[] diagRL = new int[] { 0, 0 };
+
+        private void Score(Button sender)
+        {
+            Button clicked = sender;
+            int location = 0;
+            bool X = (string)clicked.Content == "X";
+            bool O = (string)clicked.Content == "O";
+
+            if (location == 0)
+            {
+                if (X)
+                {
+                    row1[0] += 1;
+                    col1[0] += 1;
+                    diagLR[0] += 1;
+                }
+                else if (O)
+                {
+                    row1[1] += 1;
+                    col1[1] += 1;
+                    diagLR[1] += 1;
+                }
+            }
+            if (location == 1)
+            {
+                if (X)
+                {
+                    row1[0] += 1;
+                    col2[0] += 1;
+                }
+                else if (O)
+                {
+                    row1[1] += 1;
+                    col2[1] += 1;
+                }
+            }
+            if (location == 2)
+            {
+                if (X)
+                {
+                    row1[0] += 1;
+                    col3[0] += 1;
+                    diagRL[0] += 1;
+                }
+                else if (O)
+                {
+                    row1[1] += 1;
+                    col3[1] += 1;
+                    diagRL[1] += 1;
+                }
+            }
+            if (location == 3)
+            {
+                if (X)
+                {
+                    row2[0] += 1;
+                    col1[0] += 1;
+                }
+                else if (O)
+                {
+                    row2[1] += 1;
+                    col1[1] += 1;
+                }
+            }
+            if (location == 4)
+            {
+                if (X)
+                {
+                    row2[0] += 1;
+                    col2[0] += 1;
+                    diagLR[0] += 1;
+                    diagRL[0] += 1;
+                }
+                else if (O)
+                {
+                    row2[1] += 1;
+                    col2[1] += 1;
+                    diagLR[0] += 1;
+                    diagRL[0] += 1;
+                }
+            }
+            if (location == 5)
+            {
+                if (X)
+                {
+                    row2[0] += 1;
+                    col3[0] += 1;
+                }
+                else if (O)
+                {
+                    row2[1] += 1;
+                    col3[1] += 1;
+                }
+            }
+            if (location == 6)
+            {
+                if (X)
+                {
+                    row3[0] += 1;
+                    col1[0] += 1;
+                    diagRL[0] += 1;
+                }
+                else if (O)
+                {
+                    row3[1] += 1;
+                    col1[1] += 1;
+                    diagRL[1] += 1;
+                }
+            }
+            if (location == 7)
+            {
+                if (X)
+                {
+                    row3[0] += 1;
+                    col2[0] += 1;
+                }
+                else if (O)
+                {
+                    row3[1] += 1;
+                    col2[1] += 1;
+                }
+            }
+            if (location == 8)
+            {
+                if (X)
+                {
+                    row3[0] += 1;
+                    col3[0] += 1;
+                    diagLR[0] += 1;
+                }
+                else if (O)
+                {
+                    row3[1] += 1;
+                    col3[1] += 1;
+                    diagLR[1] += 1;
+                }
+            }
+            if (row1[0] == 3 || row2[0] == 3 || row3[0] == 3 || col1[0] == 3 || col2[0] == 3 || col3[0] == 3 || diagRL[0] == 3 || diagLR[0] == 3)
+            {
+                MessageBox.Show("Player X has gotten tic tac toe, three in a row!");
+            }
+            else if (row1[1] == 3 || row2[1] == 3 || row3[1] == 3 || col1[1] == 3 || col2[1] == 3 || col3[1] == 3 || diagRL[1] == 3 || diagLR[1] == 3)
+            {
+                MessageBox.Show("Player O has gotten tic tac toe, three in a row!");
+            }
+
+        }
+    }
 }
