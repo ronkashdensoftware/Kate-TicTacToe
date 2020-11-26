@@ -149,6 +149,18 @@ namespace TicTacToe
 
     }
 
-    //-----------------------------
-  }
+        //-----------------------------
+        // Kate's original code
+        int[] row1 = new int[] { 0, 0 };
+        int[] row2 = new int[] { 0, 0 };
+        int[] row3 = new int[] { 0, 0 };
+        int[] col1 = new int[] { 0, 0 };
+        int[] col2 = new int[] { 0, 0 };
+        int[] col3 = new int[] { 0, 0 };
+        int[] diagLR = new int[] { 0, 0 };
+        int[] diagRL = new int[] { 0, 0 };
+
+
+        //-----------------------------
+    }
 }
