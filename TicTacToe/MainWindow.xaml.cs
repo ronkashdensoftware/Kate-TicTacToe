@@ -144,6 +144,15 @@ namespace TicTacToe
         return (string)rowTop[2].Content;
       }
 
+      //check diagonal
+      if(((string)rowTop[0].Content != "") && (rowTop[0].Content == rowMiddle[1].Content) && (rowMiddle[1].Content == rowBottom[2].Content))
+            {
+                return (string)rowTop[0].Content;
+            }
+      if(((string)rowTop[2].Content != "") && (rowTop[2].Content == rowMiddle[1].Content) && (rowMiddle[1].Content == rowBottom[0].Content))
+            {
+                return (string)rowTop[2].Content;
+            }
 
       return "";
 
